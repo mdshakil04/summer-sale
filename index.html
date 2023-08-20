@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="banner-container">
-            <div class="hero h-[870px] bg-[#F9F6E2]">
+            <div class="hero min-h-[870px] bg-[#F9F6E2]">
                 <div class="hero-content flex-col lg:flex-row-reverse">
                   <div class="flex-1">
                     <img src="images/banner-image.png" class="" />
@@ -18,17 +18,157 @@
                   <div class="flex-1 text-center">
                     <h2 class="text-3xl">---SALE FEVER---</h2>
                     <h1 class="text-5xl font-bold mt-10">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span> </h1>
-                    <p class="mt-16">Use Promo Code <button class="btn btn-primary border-none w-36 bg-[#E527B2] text-2xl text-white">SELL200</button></p>
+                    <p class="mt-16 text-xl font-semibold">Use Promo Code <button class="btn btn-primary border-none w-36 bg-[#E527B2] text-2xl text-white">SELL200</button></p>
                   </div>
                 </div>
               </div>
         </div>
     </header>
     <main>
-        
+        <section class="p-4 lg:flex lg:flex-row-reverse grid grid-cols-1 gap-10 justify-center mt-20 bg-[#F8F8F8;] ">
+            <!-- Parchase container -->
+            <div class="parchase-container h-min mt-28 w-auto md:ml-10 ">
+                <!-- discount coupon -->
+                <div class="md:p-8 rounded-lg bg-white">
+                    <h2 class="text-2xl">Have Coupon?</h2>
+                    <div class="form-control mt-4">
+                        <label class="input-group">
+                          <input type="text" placeholder="Coupon code" class="input input-bordered "/>
+                          <button disabled class="btn btn-secondary">Apply</button>
+                        </label>
+                      </div>
+                </div>
+                <!-- added-cart-items -->
+                <div class="md:p-8 rounded-lg bg-white mt-6">
+
+                </div>
+                <hr>
+                <!-- price calculations -->
+                <div class="md:p-8 rounded-lg bg-white">
+                    <p class="text-2xl font-semibold">Total Price: <span></span></p>
+                    <p class="text-2xl font-semibold mb-2">Discount : <span></span></p>
+                    <hr>
+                    <p class="text-2xl font-semibold mt-2 mb-4">Total: <span></span></p>
+                    <button class="btn btn-secondary w-full text-xl text-white">Make Purchase</button>
+                </div>
+            </div>
+            <!-- Products Container -->
+            <div class="products-container pt-10 pb-10">
+                <!-- Products Section 1 -->
+                <h1 class="font-bold text-4xl mb-8">Kitchenware</h1>
+                <div class=" cart-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+                                    <!-- Cart-1 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure class=" p-10 bg-[#1111110D]">
+                        <img src="images/prod1.png" alt="spoon" class="" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title">K. Accessories</h2>
+                            <p><span>39.00</span> TK</p>
+                        </div>
+                    </div>
+                <!-- Cart-2 -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure class="p-10 bg-[#1111110D]">
+                    <img src="images/prod2.png" alt="spoon" class="" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <h2 class="card-title">K. Accessories</h2>
+                        <p><span>25.00</span> TK</p>
+                    </div>
+                </div>
+                <!-- cart-3 -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure class=" p-10 bg-[#1111110D]">
+                    <img src="images/prod3.png" alt="spoon" class="" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <h2 class="card-title">Home Cooker</h2>
+                        <p><span>4 9.00</span> TK</p>
+                    </div>
+                </div>
+                </div>
+                <!-- Productds Section 2 -->
+                <h1 class="font-bold text-4xl mb-8 mt-8">Sportswear</h1> 
+                <div class=" cart-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+                    <!-- Cart-1 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure class="p-10 bg-[#1111110D]">
+                        <img src="images/prod4.png" alt="spoon" class="" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title">Sports Back Cap</h2>
+                            <p><span>4 9.00</span> TK</p>
+                        </div>
+                    </div>
+                    <!-- Cart-2 -->
+                    <div class="card  bg-base-100 shadow-xl">
+                        <figure class="p-10 bg-[#1111110D]">
+                        <img src="images/prod5.png" alt="spoon" class="" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title">Full Jersey Set</h2>
+                            <p><span>69.00</span> TK</p>  
+                        </div>
+                    </div>
+                    <!-- cart-3 -->
+                    <div class="card  bg-base-100 shadow-xl">
+                        <figure class="p-10 bg-[#1111110D]">
+                        <img src="images/prod6.png" alt="spoon" class="" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title">Sports cates</h2>
+                            <p><span>159.00</span> TK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-
+       
     </footer>
 </body>
 </html>
