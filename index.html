@@ -33,23 +33,37 @@
                     <h2 class="text-2xl">Have Coupon?</h2>
                     <div class="form-control mt-4">
                         <label class="input-group">
-                          <input type="text" placeholder="Coupon code" class="input input-bordered "/>
-                          <button disabled class="btn btn-secondary">Apply</button>
+                          <input id="coupon-field" type="text" placeholder="Coupon code" class="input input-bordered "/>
+                          <button id="discount-btn" disabled class="btn btn-secondary">Apply</button>
                         </label>
                       </div>
                 </div>
                 <!-- added-cart-items -->
-                <div class="md:p-8 rounded-lg bg-white mt-6">
+                <div id="added-cart-container" class="md:p-8 rounded-lg bg-white mt-6">
 
                 </div>
                 <hr>
                 <!-- price calculations -->
                 <div class="md:p-8 rounded-lg bg-white">
-                    <p class="text-2xl font-semibold">Total Price: <span></span></p>
-                    <p class="text-2xl font-semibold mb-2">Discount : <span></span></p>
+                    <p  class="text-2xl font-semibold">Total Price: <span id="total-price">0</span> TK</p>
+                    <p class="text-2xl font-semibold mb-2">Discount : <span id="discount-value">0</span></p>
                     <hr>
                     <p class="text-2xl font-semibold mt-2 mb-4">Total: <span></span></p>
-                    <button class="btn btn-secondary w-full text-xl text-white">Make Purchase</button>
+                    <!-- modal -->
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button class="btn btn-secondary w-full text-xl text-white" onclick="my_modal_5.showModal()">open modal</button>
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
+                    <form method="dialog" class="modal-box items-center flex flex-col justify-center text-center">
+                        <img src="images/modal-image.png" alt="">
+                        <h3 class="font-bold text-5xl">Congratulations</h3>
+                        <p class="py-4">You Purchase the product</p>
+                        <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn bg-[#E527B2;] text-white w-auto">Go Home</button>
+                        </div>
+                    </form>
+                    </dialog>
+                    <!-- <button class="btn btn-secondary w-full text-xl text-white">Make Purchase</button> -->
                 </div>
             </div>
             <!-- Products Container -->
@@ -58,11 +72,11 @@
                 <h1 class="font-bold text-4xl mb-8">Kitchenware</h1>
                 <div class=" cart-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
                                     <!-- Cart-1 -->
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="addToCart(this)" class="card bg-base-100 shadow-xl">
                         <figure class=" p-10 bg-[#1111110D]">
                         <img src="images/prod1.png" alt="spoon" class="" />
                         </figure>
-                        <div class="card-body items-center text-center">
+                        <div  class="card-body items-center text-center">
                             <div class="rating">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
@@ -70,12 +84,12 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="card-title">K. Accessories</h2>
-                            <p><span>39.00</span> TK</p>
+                            <h2 class="card-title">K. Spoon</h2>
+                            <p><span>139.00</span> TK</p>
                         </div>
                     </div>
                 <!-- Cart-2 -->
-                <div class="card  bg-base-100 shadow-xl">
+                <div onclick="addToCart(this)" class="card  bg-base-100 shadow-xl">
                     <figure class="p-10 bg-[#1111110D]">
                     <img src="images/prod2.png" alt="spoon" class="" />
                     </figure>
@@ -88,11 +102,11 @@
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <h2 class="card-title">K. Accessories</h2>
-                        <p><span>25.00</span> TK</p>
+                        <p><span>125.00</span> TK</p>
                     </div>
                 </div>
                 <!-- cart-3 -->
-                <div class="card  bg-base-100 shadow-xl">
+                <div onclick="addToCart(this)" class="card  bg-base-100 shadow-xl">
                     <figure class=" p-10 bg-[#1111110D]">
                     <img src="images/prod3.png" alt="spoon" class="" />
                     </figure>
@@ -105,7 +119,7 @@
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <h2 class="card-title">Home Cooker</h2>
-                        <p><span>4 9.00</span> TK</p>
+                        <p><span>149.00</span> TK</p>
                     </div>
                 </div>
                 </div>
@@ -113,7 +127,7 @@
                 <h1 class="font-bold text-4xl mb-8 mt-8">Sportswear</h1> 
                 <div class=" cart-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
                     <!-- Cart-1 -->
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="addToCart(this)" class="card bg-base-100 shadow-xl">
                         <figure class="p-10 bg-[#1111110D]">
                         <img src="images/prod4.png" alt="spoon" class="" />
                         </figure>
@@ -126,11 +140,11 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title">Sports Back Cap</h2>
-                            <p><span>4 9.00</span> TK</p>
+                            <p><span>99.00</span> TK</p>
                         </div>
                     </div>
                     <!-- Cart-2 -->
-                    <div class="card  bg-base-100 shadow-xl">
+                    <div onclick="addToCart(this)" class="card  bg-base-100 shadow-xl">
                         <figure class="p-10 bg-[#1111110D]">
                         <img src="images/prod5.png" alt="spoon" class="" />
                         </figure>
@@ -143,11 +157,11 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title">Full Jersey Set</h2>
-                            <p><span>69.00</span> TK</p>  
+                            <p><span>269.00</span> TK</p>  
                         </div>
                     </div>
                     <!-- cart-3 -->
-                    <div class="card  bg-base-100 shadow-xl">
+                    <div onclick="addToCart(this)" class="card  bg-base-100 shadow-xl">
                         <figure class="p-10 bg-[#1111110D]">
                         <img src="images/prod6.png" alt="spoon" class="" />
                         </figure>
@@ -170,5 +184,6 @@
     <footer>
        
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
