@@ -24,11 +24,12 @@ function addToCart(target){
         }
         const discount = (totalPrice*20)/100;
         const discountTotalElement = document.getElementById('discount-value');
-        // const discountTotalValueString = discountTotalElement.innerText;
-        // const discountTotalValue = parseFloat(discountTotalValueString);
-        // const newDiscountPrice = discountTotalValue + discount;
-        // console.log(newDiscountPrice)
         discountTotalElement.innerText = discount.toFixed(2);
+
+        const finalPriceField = document.getElementById('final-price')
+        const finalPrice = totalPrice - discount;
+        finalPriceField.innerText = finalPrice.toFixed(2);
+
     })
 
 
