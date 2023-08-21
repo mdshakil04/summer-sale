@@ -10,12 +10,12 @@
 <body>
     <header>
         <div class="banner-container">
-            <div class="hero min-h-[870px] bg-[#F9F6E2]">
-                <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="hero min-h-[870px] w-auto bg-[#F9F6E2]">
+                <div class="w-auto hero-content flex-col lg:flex-row-reverse">
                   <div class="flex-1">
                     <img src="images/banner-image.png" class="" />
                   </div>
-                  <div class="flex-1 text-center">
+                  <div class="w-auto flex-1 text-center">
                     <h2 class="text-3xl">---SALE FEVER---</h2>
                     <h1 class="text-5xl font-bold mt-10">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span> </h1>
                     <p class="mt-16 text-xl font-semibold">Use Promo Code <button class="btn btn-primary border-none w-36 bg-[#E527B2] text-2xl text-white">SELL200</button></p>
@@ -29,10 +29,10 @@
             <!-- Parchase container -->
             <div class="parchase-container h-min mt-28 w-auto md:ml-10 ">
                 <!-- discount coupon -->
-                <div class="md:p-8 rounded-lg bg-white">
+                <div class="w-auto md:p-8 rounded-lg bg-white">
                     <h2 class="text-2xl">Have Coupon?</h2>
-                    <div class="form-control mt-4">
-                        <label class="input-group">
+                    <div class="w-auto form-control mt-4">
+                        <label class="input-group w-auto">
                           <input id="coupon-field" type="text" placeholder="Coupon code" class="input input-bordered "/>
                           <button id="discount-btn" disabled class="btn btn-secondary">Apply</button>
                         </label>
@@ -44,22 +44,22 @@
                 </div>
                 <hr>
                 <!-- price calculations -->
-                <div class="md:p-8 rounded-lg bg-white">
+                <div class="w-auto md:p-8 rounded-lg bg-white">
                     <p  class="text-2xl font-semibold">Total Price: <span id="total-price">0</span> TK</p>
                     <p class="text-2xl font-semibold mb-2">Discount : <span id="discount-value">0</span></p>
                     <hr>
                     <p class="text-2xl font-semibold mt-2 mb-4">Total: <span id="final-price">0</span></p>
                     <!-- modal -->
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="btn btn-secondary w-full text-xl text-white" onclick="my_modal_5.showModal()">open modal</button>
+                    <button class="btn btn-secondary w-auto text-xl text-white" onclick="my_modal_5.showModal()">Make Purchase</button>
                     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
-                    <form method="dialog" class="modal-box items-center flex flex-col justify-center text-center">
+                    <form method="dialog" class="w-auto modal-box items-center flex flex-col justify-center text-center">
                         <img src="images/modal-image.png" alt="">
                         <h3 class="font-bold text-5xl">Congratulations</h3>
                         <p class="py-4">You Purchase the product</p>
                         <div class="modal-action">
                         <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn bg-[#E527B2;] text-white w-auto">Go Home</button>
+                        <button id="home-button" class="btn bg-[#E527B2;] text-white w-auto hover:bg-orange-500">Go Home</button>
                         </div>
                     </form>
                     </dialog>

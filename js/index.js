@@ -13,13 +13,13 @@ function addToCart(target){
     if(totalPrice >= 200){
         buttonDiscount.removeAttribute('disabled')
     }
+    // Final Calculation
     document.getElementById('discount-btn').addEventListener('click', function(){
         const couponField = document.getElementById('coupon-field');
         const couponFieldValue = couponField.value;
         // console.log(couponFieldValue)
         couponField.Value = '';
         if(couponFieldValue !== 'SELL200'){
-            alert ("Please Type Valid Promo Code!!!")
             return;
         }
         const discount = (totalPrice*20)/100;
@@ -43,3 +43,6 @@ function addItemNameInCart(elementId, name){
     p.innerHTML = `${count +1} ${name}`;
     targetCart.appendChild(p);
 }
+document.getElementById('home-button').addEventListener('click', function(){
+    window.location.href= "index.html";
+})
